@@ -1,0 +1,323 @@
+.container {
+  /* border: 10px solid green; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
+  gap: 2rem 0;
+  background-color: var(--mainBackGround);
+}
+
+.container > div {
+  /* min-height: 98vh; */
+  height: 98vh;
+}
+
+/* ADMIN LEFT */
+.container .admin_left {
+  width: 270px;
+  /* border: 1px solid red; */
+  background-color: var(--mainWhite);
+  position: relative;
+}
+
+.admin_left_nav {
+  box-shadow: 0px 0px 1px grey;
+  padding: 20px 15px;
+  /* border: 1px solid green; */
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin_left_nav > h3 {
+  display: inline-block;
+}
+
+.admin_left_nav span {
+  display: none;
+}
+
+.admin_left_message_list {
+  /* border: 1px solid green; */
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin_left_message_list span {
+  font-size: 13px;
+}
+
+.admin_left_message_list > div {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+}
+
+.admin_left_icon {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+}
+
+.admin_left_icon > i:first-of-type {
+  background-color: var(--mainBackGround);
+  padding: 5px;
+}
+
+/* ADMIN CENTER STARTS */
+.container > div:nth-of-type(2) {
+  /* border: 1px solid blue; */
+  width: 350px;
+  background-color: var(--mainWhite);
+  position: relative;
+  flex-basis: 1 1 350px;
+  flex-grow: 1;
+  z-index: 1;
+}
+
+.admin_center_nav {
+  box-shadow: 0px 0px 1px var(--mainGrey);
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 8vh;
+}
+.open_messageList {
+  display: none;
+}
+
+.admin_center_nav > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid green; */
+  padding: 20px 0;
+  gap: 0 2rem;
+}
+
+.admin_center_nav > div > div:nth-child(1),
+.admin_center_nav > div > div:nth-child(2) {
+  background-color: var(--mainBackGround);
+  padding: 2px 10px;
+  /* border: 1px solid red; */
+}
+
+.admin_center_nav .admin_center_nav_icon {
+  background-color: var(--mainBlack);
+  padding: 1px 10px;
+  border-radius: 5px;
+  color: var(--mainWhite);
+  /* border: 1px solid red; */
+}
+.admin_center > div:nth-child(2) {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid blue; */
+}
+
+.admin_center_inbox {
+  /* border: 1px solid red; */
+  padding: 10px 20px;
+  position: absolute;
+  width: 90%;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px grey;
+  border-radius: 10px;
+}
+
+.admin_center_inbox > form > div:first-of-type {
+  padding-bottom: 5px;
+}
+
+.admin_center_inbox > form > div:first-of-type i {
+  margin: 0 2px;
+}
+
+.admin_center_inbox > form > textarea {
+  width: 100%;
+  outline: none;
+  resize: none;
+  border: none;
+  height: 70px;
+  position: relative;
+}
+
+.admin_center_inbox > form > div:last-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.admin_center_inbox > form > div:last-of-type > div:first-of-type i {
+  margin: 0 4px;
+}
+
+.admin_center_inbox .submit_btn {
+  padding: 10px 20px;
+  color: var(--mainBlack);
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  justify-content: center;
+}
+.admin_center_inbox .submit_btn.active {
+  background-color: var(--mainBlack);
+  color: var(--mainWhite);
+}
+
+.admin_center_inbox .chat_inbox_icon {
+  font-size: 20px;
+  display: inline-block;
+  /* border: 1px solid red; */
+}
+
+/* ADMIN RIGHT */
+.container > div:last-of-type {
+  width: 500px;
+  /* border: 1px solid blue; */
+  position: relative;
+  transition: margin-right 0.3s ease-in-out;
+}
+.admin_right.active {
+  margin-right: -500px;
+}
+.admin_right_nav {
+  padding: 20px;
+  /* border: 1px solid green; */
+  box-shadow: 0px 0px 1px var(--mainGrey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+}
+
+.admin_right_nav .admin_right_nav_tab {
+  padding: 8px;
+  font-weight: bolder;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.admin_right_nav .admin_right_nav_tab.active {
+  color: var(--mainCopilot);
+}
+
+.admin_right_nav .admin_right_nav_tab.active::after {
+  content: "";
+  position: absolute;
+  top: 2.8rem;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  height: 10px;
+  width: 100%;
+  border-bottom: 4px solid var(--mainCopilot);
+}
+
+.admin_right_nav ul {
+  list-style-type: none;
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 0 2rem;
+  /* border: 1px solid green; */
+}
+.admin_right_block {
+  min-height: 90vh; /* check Later*/
+  /* border: 10px solid green; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle_icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-wrap: nowrap;
+    /* display: block; */
+  }
+  .admin_left {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    height: 100vh !important;
+    margin-left: -270px;
+    transition: margin-left 0.3s ease-in-out;
+  }
+
+  .admin_left.active {
+    margin-left: 0;
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .admin_left_nav span {
+    display: block;
+  }
+
+  .admin_center {
+    /* flex: 1 1 100%; */
+    margin-left: 20;
+    z-index: 1;
+  }
+
+  .open_messageList {
+    display: block;
+  }
+
+  .admin_center_nav > div {
+    padding: 0 10px;
+  }
+
+  .admin_center_nav > h3 {
+    font-size: 13px;
+  }
+  .admin_center_nav > div {
+    gap: 0 1rem;
+  }
+
+  .admin_center_nav > div > div:nth-child(1),
+  .admin_center_nav > div > div:nth-child(2) {
+    padding: 2px 3px;
+    /* border: 1px solid red; */
+  }
+
+  .admin_right {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    margin-right: -500px;
+    background-color: var(--mainBackGround);
+    height: 100vh !important;
+    z-index: 1000;
+    transition: margin-right 0.3s ease-in-out;
+  }
+  .admin_right.collapse {
+    margin-right: 0;
+  }
+
+  .toggle_icon {
+    display: block;
+  }
+}

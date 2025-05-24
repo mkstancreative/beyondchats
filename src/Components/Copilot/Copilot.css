@@ -1,0 +1,48 @@
+.copilot_container {
+  width: 100%;
+  /* border: 5px solid blue; */
+  position: relative;
+}
+.copilot_block1 {
+  padding: 20px;
+  /* border: 1px solid red; */
+  text-align: center;
+}
+
+.copilot_block2 {
+  /* border: 1px solid green; */
+  /* padding: 20px; */
+
+  position: absolute;
+  bottom: -18rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.copilot_block2 > p {
+  padding: 10px;
+  background-color: var(--mainWhite);
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px var(--mainGrey);
+}
+
+.copilot_block2 > div {
+  background-color: var(--mainWhite);
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 10px;
+  box-shadow: 1px 1px 3px var(--mainGrey);
+}
+
+.copilot_block2 > div input {
+  width: 95%;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+.copilot_block2 > div i {
+  font-size: 20px;
+}

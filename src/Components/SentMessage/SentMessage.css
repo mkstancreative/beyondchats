@@ -1,0 +1,46 @@
+.sent_message {
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px solid green; */
+  gap: 0 10px;
+  max-width: 660px;
+  margin-bottom: 1rem;
+}
+
+.sent_message > div:first-of-type {
+  border-radius: 12px;
+  background-color: var(--messageColor);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+
+.sent_message > div:first-of-type > p {
+  font-size: 14px;
+}
+.sent_message > div:first-of-type > div {
+  align-self: flex-end;
+}
+
+.sent_message > div:first-of-type > div > span {
+  font-size: 15px;
+}
+.sent_message > div:first-of-type > div > span + span {
+  margin-left: 10px;
+}
+
+.sent_message .sent_message_user {
+  width: 30px;
+  height: 30px;
+  align-self: flex-end;
+  border-radius: 50%;
+}
+
+.sent_message_user > img {
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,37 @@
+.received_message {
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px solid green; */
+  gap: 0 10px;
+  max-width: 660px;
+  margin-bottom: 1rem;
+}
+
+.received_message > div:first-of-type {
+  width: 30px;
+  height: 30px;
+  align-self: flex-end;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--messageColor);
+}
+
+.received_message > div:last-of-type {
+  border-radius: 12px;
+  padding: 10px;
+  background-color: var(--mainBackGround);
+}
+
+.received_message > div:last-of-type > p {
+  font-size: 14px;
+}
+
+.received_message > div:last-of-type > span {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 15px;
+}
